@@ -1,0 +1,95 @@
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $clr-background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 413px;
+  min-height: 556px;
+  overflow: hidden;
+  border-radius: $rounding;
+  background-color: $clr-box;
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    width: 343px;
+    min-height: auto;
+  }
+  @media screen and (max-width: map-get($breakpoints, xxs)) {
+    width: 95%;
+  }
+
+  .offer {
+    width: 85%;
+    margin: -$main-spacing auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: $stroke solid $clr-stroke;
+    padding-bottom: $main-spacing;
+
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+      padding-bottom: $main-spacing / 2;
+
+      margin-top: -$main-spacing * 2;
+    }
+    &__cost-worth {
+      color: $clr-primary;
+      font-weight: 700;
+      transition: 0.3s;
+      &:hover {
+        cursor: pointer;
+        scale: 1.1;
+      }
+      @media screen and (max-width: map-get($breakpoints, sm)) {
+        font-size: 16px;
+      }
+    }
+    &__time-limit {
+      font-size: 16px;
+      @media screen and (max-width: map-get($breakpoints, sm)) {
+        font-size: 14px;
+      }
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+      margin-right: $main-spacing / 2;
+    }
+    .element {
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: map-get($breakpoints, sm)) {
+      }
+    }
+  }
+  .author {
+    display: flex;
+    align-items: center;
+    margin: ($main-spacing / 1.5) 0 0 7.5%;
+    padding-bottom: $main-spacing / 1.5;
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+    }
+    &-image {
+      width: 40px;
+      height: 40px;
+      margin-right: $main-spacing;
+      transition: 0.3s;
+      &:hover {
+        cursor: pointer;
+        scale: 1.1;
+      }
+    }
+    &-name {
+      font-size: 16px;
+      span {
+        color: $clr-title;
+      }
+      @media screen and (max-width: map-get($breakpoints, sm)) {
+        font-size: 14px;
+      }
+    }
+  }
+}
